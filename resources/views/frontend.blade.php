@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'/>
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{$meta_url}}">
     <meta property="og:image" content="{{$meta_image}}">
-    <meta property="og:site_name" content="Thông huyết">
+    <meta property="og:site_name" content="Cà gai leo Tuệ Linh">
 
     <meta name="twitter:card" content="Card">
     <meta name="twitter:url" content="{{$meta_url}}">
@@ -70,6 +70,8 @@
 </script>
 <script type="text/javascript" src="{{url('frontend/js/jquery-1.10.2.min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/owl.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{url('frontend/js/jquery.matchHeight-min.js')}}"></script>
+<script type="text/javascript" src="{{url('frontend/js/fixedsidebar.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/common.js')}}"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<footer class="footer">
+﻿<footer class="footer" id="footer">
     <div class="container">
         <div class="boxFooter clearFix">
             <div class="areaSocial">
@@ -23,8 +23,8 @@
     </div>
     <div class="copyRight">
         <div class="container">
-            <p class="copy">Giúp hoạt huyết, thông kinh<br />
-          © 2016 Thông Huyết Tuệ Linh. Vui lòng ghi rõ nguồn khi sử dụng nội dung từ website này.</p>
+            <p class="copy">Hỗ trợ điều trị viêm gan vi rút, điều trị men gan cao, xơ gan<br />
+          © 2016 Cà gai leo Tuệ Linh. Vui lòng ghi rõ nguồn khi sử dụng nội dung từ website này.</p>
       </div>
     </div>
 </footer>

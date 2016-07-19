@@ -216,17 +216,16 @@
         });
     };
 
-    var equalHeight = function(selector) {
-        minheight = 0;
-        $(selector).each(function() {
-            thisheight = $(this).height();
-            if (thisheight > minheight) {
-                minheight = thisheight
-            }
-        });
-        minheight = minheight + 2;
-        $(selector).css("min-height", minheight)
-    };
+    /*equalHeight*/
+       equalHeight($('.col-left .box-news .item, .col-left .box-media .item'));
+        function equalHeight(obj) {
+          if($(window).width() > 960 && obj.length>0){
+              obj.matchHeight();
+              $.fn.matchHeight._update();
+          } else {
+            obj.removeAttr('style');
+          }
+        }
 
     var tabContent = function(){
         $("a[data-type='tab']").on('click',function(e){
@@ -259,7 +258,6 @@
         slideLink();
         slidePartner();
         tabContent();
-        equalHeight(".box-member .data .item");
         setMenuMobile();
         resetMenuMobile();
     });
