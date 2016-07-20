@@ -120,7 +120,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-#sidebar {
+/* #sidebar {
   width: 300px;
   position: absolute;
 }
@@ -128,7 +128,7 @@ img {
 #sidebar.fixed {
   position: fixed;
   top: 100px;
-}
+} */
 .hotLine {
   background: #fff;
   position: fixed;
