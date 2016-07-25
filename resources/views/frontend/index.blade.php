@@ -191,7 +191,7 @@
                     </div>
                 @endif
             </div><!--//col-left-->
-            @include('frontend.right')
+            @include('frontend.right_index')
             <div class="clear"></div>
         </div><!--//layout-home-->
         <div class="clear"></div>
