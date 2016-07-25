@@ -56,7 +56,7 @@ class ViewComposerProvider extends ServiceProvider
 
             $view->with('featureVideos',  Video::latest('updated_at')->limit(4)->get());
             $view->with('rightNews',  Post::publish()->latest('updated_at')->limit(2)->get());
-            $view->with('rightBanners',  Banner::where('status', true)->where('position', 'right')->get());
+
         });
 
         view()->composer('frontend.right', function ($view) {
