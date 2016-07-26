@@ -1,28 +1,28 @@
+$(function() {
 
-  $(function() {
+    var sidebar =   $('#sidebar');
+    var top = sidebar.offset().top.toFixed(0);
+    var maxY = top - sidebar.outerHeight().toFixed(0);
 
-      var sidebar =   $('#sidebar');
-
-      var top = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
-      var footTop = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
-
-      var maxY = footTop - sidebar.outerHeight();
 
     $(window).scroll(function(evt) {
 
 
-        var y = $(this).scrollTop();
+        var y = $(this).scrollTop().toFixed(0);
+
         if (y > top) {
-          if (y < maxY) {
-              sidebar.addClass('fixed').removeAttr('style');
-          } else {
-              sidebar.removeClass('fixed').css({
-              position: 'absolute',
-              top: (maxY - top) + 'px'
-            });
-          }
+            if (y < maxY) {
+                sidebar.addClass('fixed').removeAttr('style');
+            } else {
+                sidebar.removeClass('fixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
         } else {
             sidebar.removeClass('fixed');
         }
+
+
     });
 });
