@@ -74,13 +74,5 @@
 <script type="text/javascript" src="{{url('frontend/js/common.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/fixedsidebar.js')}}"></script>
 
-<script>
-    jQuery(document).ready(function(){
-        var q2w3_sidebar_1_options = { "sidebar" : "sidebar", "margin_top" : 40, "margin_bottom" : 166, "screen_max_width" : 0, "width_inherit" : false, "widgets" : ['ads_widget-22'] };
-        q2w3_sidebar(q2w3_sidebar_1_options);
-        setInterval(function () { q2w3_sidebar(q2w3_sidebar_1_options); }, 1500);
-    });
-
-</script>
 </body>
 </html>
