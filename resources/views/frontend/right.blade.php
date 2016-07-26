@@ -30,7 +30,7 @@
         <div class="fb-page" data-href="https://www.facebook.com/viemgan.com.vn/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/viemgan.com.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/viemgan.com.vn/">PHÒNG BỆNH GAN</a></blockquote>
         </div>
       </div>
-        
+
 
     <div class="boxHot cf" id="sidebar">
         <h3 class="global-title"><a href="{{url('tin-tuc')}}">Tin nổi bật</a></h3>
