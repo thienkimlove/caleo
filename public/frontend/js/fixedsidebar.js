@@ -1,12 +1,15 @@
 
   $(function() {
+
+      var sidebar =   $('#sidebar');
+
+      var top = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
+      var footTop = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
+
+      var maxY = footTop - sidebar.outerHeight();
+
     $(window).scroll(function(evt) {
 
-        var sidebar =   $('#sidebar');
-        var top = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
-        var footTop = sidebar.offset().top - parseFloat(sidebar.css('marginTop').replace(/auto/, 0));
-
-        var maxY = footTop - sidebar.outerHeight();
 
         var y = $(this).scrollTop();
         if (y > top) {
