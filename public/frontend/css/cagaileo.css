@@ -123,7 +123,7 @@ img {
 #sidebar.fixed {
   position: fixed;
   width : 300px;
-  top: 200px;
+  top: 20px;
 }
 .hotLine {
   background: #fff;
@@ -3640,6 +3640,11 @@ img {
   .sp {
     display: block;
   }
+
+  #sidebar.fixed {
+  position: relative;
+  width : 100%;
+}
   .box-media .item, .box-mix .item.item-3, .box-mix .item.item-4, .box-copyright .copyright {
     clear: both;
     width: 100%;
