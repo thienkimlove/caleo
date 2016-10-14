@@ -3,10 +3,10 @@
         <div class="boxFooter clearFix">
             <div class="areaSocial">
                 <ul class="listSocial clearFix">
-                    <li><a href="#" class="se">Search</a></li>
-                    <li><a href="#" class="yu">Youtube</a></li>
-                    <li><a href="#" class="sk">Skype</a></li>
-                    <li><a href="#" class="go">googleplus</a></li>
+                    <li><a href="https://www.google.com.vn/?gfe_rd=cr&ei=itHMV-DHNrPY8gfOkrLACA#q=gi%E1%BA%A3i+%C4%91%E1%BB%99c+gan+tu%E1%BB%87+linh" target="_blank" class="se">Search</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL6cgnq2l30jJhdUO50sOlMv3adPJ306R1" target="_blank" class="yu">Youtube</a></li>
+                    <li><a href="https://www.facebook.com/viemgan.com.vn/" target="_blank" class="sk">Skype</a></li>
+                    <li><a href="https://www.facebook.com/viemgan.com.vn/" target="_blank" class="go">googleplus</a></li>
                 </ul>
             </div>
             <div class="areaLink">

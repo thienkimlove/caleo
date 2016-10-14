@@ -32,6 +32,18 @@
                     <div class="boxLike">
                         <div class="addthis_native_toolbox"></div>
                     </div>
+					
+					<div class="box-adv-center">
+                        <div class="head"><span>Quảng cáo</span></div>
+                        <div class="data">
+                            @foreach ($middleIndexBanner as $banner)
+                                <div class="item full">
+                                    <a href="{{$banner->url}}"><img src="{{url('files/'.$banner->image)}}" alt=""></a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="clear"></div>
+                    </div><!--//box-adv-center-->
 
                     <div class="released-post">
                         <div class="title">

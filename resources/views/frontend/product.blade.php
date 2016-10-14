@@ -40,7 +40,7 @@ Cà gai leo Tuệ Linh</a>
                             {!! $product->content_tab3 !!}
                         </article>
                     </div><!--//news-list-->
-
+					
                     <div class="box-adv-center">
                         <div class="head"><span>Quảng cáo</span></div>
                         <div class="data">
@@ -51,8 +51,9 @@ Cà gai leo Tuệ Linh</a>
                             @endforeach
                         </div>
                         <div class="clear"></div>
+						<div class="fb-comments" data-href="http://www.cagaileo.vn/" data-numposts="5" data-width="100%"></div>
                     </div><!--//box-adv-center-->
-
+               
                 </div>
                 <div class="box-product">
                     <div class="title">

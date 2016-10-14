@@ -15,8 +15,8 @@
                 {!! Form::close() !!}
             </div>
             <ul class="nav-social">
-                <li><a href=""><img src="{{url('frontend/images/i_fb.png')}}" alt=""></a></li>
-                <li><a href=""><img src="{{url('frontend/images/i_ytube.png')}}" alt=""></a></li>
+                <li><a href="https://www.facebook.com/viemgan.com.vn" target="_blank"><img src="{{url('frontend/images/i_fb.png')}}" alt=""></a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PL6cgnq2l30jJhdUO50sOlMv3adPJ306R1" target="_blank"><img src="{{url('frontend/images/i_ytube.png')}}" alt=""></a></li>
             </ul>
         </div>
     </div>

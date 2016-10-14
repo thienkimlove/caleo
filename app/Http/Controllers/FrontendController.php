@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends Controller
 {
@@ -224,15 +225,21 @@ class FrontendController extends Controller
         $data = $request->all();
 
         if (isset($data['question'])) {
-            unset($data['_token']);
-            Question::insert($data);
+
+            Mail::send('mails.question', ['data' => $data], function ($m)  {
+                $m->from(env('MAIL_USERNAME'), 'Tue Linh')
+                    ->to('contact@tuelinh.com')
+                    ->subject('Đặt câu hỏi với chuyên gia!');
+            });
+
         }
 
-        return redirect('cau-hoi-thuong-gap');
+        return redirect(url('/'));
     }
 
     public function tag($value)
     {
+        $page = 'tag';
         $middleIndexBanner = Banner::where('status', true)->where('position', 'middle_index')->get();
 
         $tag = Tag::where('slug', $value)->get();
@@ -252,7 +259,8 @@ class FrontendController extends Controller
                 ->orderBy('updated_at', 'desc')
                 ->paginate(10);
 
-            return view('frontend.tag', compact('posts', 'tag', 'middleIndexBanner'))->with($this->generateMeta([
+            return view('frontend.tag', compact('posts', 'tag', 'middleIndexBanner', 'page'))->with
+            ($this->generateMeta([
                 'title' => $meta_title,
                 'desc' => $meta_desc,
                 'keywords' => $meta_keywords,

@@ -12,12 +12,12 @@
     <meta property="og:title" content="{{$meta_title}}">
     <meta property="og:description" content="{{$meta_desc}}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{$meta_url}}">
+    <meta property="og:url" content="http://www.cagaileo.vn/product">
     <meta property="og:image" content="{{$meta_image}}">
     <meta property="og:site_name" content="Cà gai leo Tuệ Linh">
 
     <meta name="twitter:card" content="Card">
-    <meta name="twitter:url" content="{{$meta_url}}">
+    <meta name="twitter:url" content="http://www.cagaileo.vn/product">
     <meta name="twitter:title" content="{{$meta_title}}">
     <meta name="twitter:description" content="{{$meta_desc}}">
     <meta name="twitter:image" content="{{$meta_image}}">
@@ -73,6 +73,17 @@
 <script type="text/javascript" src="{{url('frontend/js/jquery.matchHeight-min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/common.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/fixedsidebar.js')}}"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84352576-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

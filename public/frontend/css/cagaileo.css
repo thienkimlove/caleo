@@ -3375,9 +3375,6 @@ img {
     display: block;
   }
 
-  .menu-left {
-    display: block;
-  }
 
   .nav-main, .box-find {
     display: none;
@@ -3640,7 +3637,7 @@ img {
   .sp {
     display: block;
   }
-
+  .menu-left {display: block;}
   #sidebar.fixed {
   position: relative;
   width : 100%;
@@ -3923,7 +3920,17 @@ img {
   .header-mid .box-find {
     right: 70px;
   }
+  #sidebar.fixed {
+    position: relative;
+    width: 100%;
+  }
 
+  .menu-left {
+    display: block;
+  }
+  .box-adv {
+    text-align: left;
+  }
   .nav-main {
     display: none;
   }
@@ -3948,5 +3955,6 @@ img {
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Styles */
+
 }
 /* iPads (portrait) ----------- */
