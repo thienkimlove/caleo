@@ -12,15 +12,17 @@
     <meta property="og:title" content="{{$meta_title}}">
     <meta property="og:description" content="{{$meta_desc}}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.cagaileo.vn/product">
+    <meta property="og:url" content="{{$meta_url}}">
     <meta property="og:image" content="{{$meta_image}}">
     <meta property="og:site_name" content="Cà gai leo Tuệ Linh">
+    <meta property="fb:app_id" content="1619483608380263" />
 
     <meta name="twitter:card" content="Card">
-    <meta name="twitter:url" content="http://www.cagaileo.vn/product">
+    <meta name="twitter:url" content="{{$meta_url}}">
     <meta name="twitter:title" content="{{$meta_title}}">
     <meta name="twitter:description" content="{{$meta_desc}}">
     <meta name="twitter:image" content="{{$meta_image}}">
+
 
     <meta itemprop="name" content="{{$meta_title}}">
     <meta itemprop="description" content="{{$meta_desc}}">
@@ -32,7 +34,7 @@
     <meta name="DESCRIPTION" content="{{$meta_desc}}"/>
     <meta name="KEYWORDS" content="{{$meta_keywords}}"/>
     <meta name="ROBOTS" content="index,follow"/>
-    <meta name="AUTHOR" content="Thông huyết"/>
+    <meta name="AUTHOR" content="Cà gai leo Tuệ Linh"/>
     <meta name="RESOURCE-TYPE" content="DOCUMENT"/>
     <meta name="DISTRIBUTION" content="GLOBAL"/>
     <meta name="COPYRIGHT" content="Copyright 2013 by Goethe"/>
@@ -60,11 +62,20 @@
     @include('frontend.mobile_menu')
 </div>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1619483608380263',
+            xfbml      : true,
+            version    : 'v2.7'
+        });
+    };
+
+    (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
+        if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4";
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
