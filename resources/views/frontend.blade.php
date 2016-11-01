@@ -85,6 +85,7 @@
 <script type="text/javascript" src="{{url('frontend/js/jquery.matchHeight-min.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/common.js')}}"></script>
 <script type="text/javascript" src="{{url('frontend/js/fixedsidebar.js')}}"></script>
+<script type="text/javascript" src="{{url('frontend/js/slideAdvs.js')}}"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
