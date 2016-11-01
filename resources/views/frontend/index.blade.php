@@ -38,7 +38,7 @@
                     @foreach ($topIndexCategory->list_posts->splice(0, 3) as $post)
                         <article class="item-products">
                             <a href="{{url($post->slug.'.html')}}" title="" class="thumbs">
-                                <img src="{url('img/cache/310x230/'.$post->image)}}" width="310" height="230" alt=""/>
+                                <img src="{{url('img/cache/310x230/'.$post->image)}}" width="310" height="230" alt=""/>
                             </a>
                             <h3>
                                 <a href="{{url($post->slug.'.html')}}" title="">{{$post->title}}</a>
@@ -56,7 +56,7 @@
                         @foreach ($sub->list_posts->splice(0, 3) as $post)
                             <article class="item-products">
                                 <a href="{{url($post->slug.'.html')}}" title="" class="thumbs">
-                                    <img src="{url('img/cache/310x230/'.$post->image)}}" width="310" height="230" alt=""/>
+                                    <img src="{{url('img/cache/310x230/'.$post->image)}}" width="310" height="230" alt=""/>
                                 </a>
                                 <h3>
                                     <a href="{{url($post->slug.'.html')}}" title="">{{$post->title}}</a>
