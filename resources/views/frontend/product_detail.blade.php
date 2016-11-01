@@ -11,7 +11,7 @@
                     <div class="img-intro">
                         <div class="img-product">
                             <div class="img-thumb">
-                                <a href="#">Xem anh lon</a>
+                                <a href="#">Xem ảnh lớn</a>
                                 <a href="">
                                     <img src="{{url('img/cache/200x200', $product->image)}}" alt="">
                                 </a>
