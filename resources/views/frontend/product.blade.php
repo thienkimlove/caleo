@@ -8,75 +8,62 @@
                 <li><a href="{{url('/')}}">Trang chủ</a></li>
                 <li>Sản phẩm</li>
             </ul>
+
             <div class="col-left">
-                <div class="box-uses">
-                    <ul class="news-type bgList">
-                        <li class="active">
-                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-infoproduct" data-parent="news-type" data-reset="news-home" title="Thông tin sản phẩm">
-Giải độc gan Tuệ Linh</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-research01" data-parent="news-type" data-reset="news-home" title="Nhận biết bao bì">
-Cà gai leo Tuệ Linh</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" rel="nofollow" data-type="tab" data-content="tab-video" data-parent="news-type" data-reset="news-home" title="Hướng dẫn sử dụng">
-                                Trà Giải độc gan Tuệ Linh
-                            </a>
-                        </li>
-                    </ul><!--//news-type-->
-                    <div class="news-home" id="tab-infoproduct" style="display: block">
-                        <article class="detail">
-                             {!! $product->content_tab1 !!}
-                        </article>
-                    </div><!--//news-list-->
-                    <div class="news-home" id="tab-research01">
-                        <article class="detail">
-                            {!! $product->content_tab2 !!}
-                        </article>
-                    </div><!--//news-list-->
-                    <div class="news-home" id="tab-video">
-                        <article class="detail">
-                            {!! $product->content_tab3 !!}
-                        </article>
-                    </div><!--//news-list-->
-					
-                    <div class="box-adv-center">
-                        <div class="head"><span>Quảng cáo</span></div>
-                        <div class="data">
-                            @foreach ($middleIndexBanner as $banner)
-                                <div class="item full">
-                                    <a href="{{$banner->url}}"><img src="{{url('files/'.$banner->image)}}" alt=""></a>
+                <div class="list-product cf">
+                    @foreach ($products as $product)
+                       <div class="item-product">
+                        <a href="{{url('product', $product->slug)}}" class="thumb-product">
+                            <img src="{{url('img/cache/188x188', $product->image)}}g" alt="">
+                        </a>
+                        <h3><a href="{{url('product', $product->slug)}}">{{$product->title}}</a></h3>
+                        <p>
+                            {{$product->desc}}
+                        </p>
+                        <div class="panel-product cf">
+                            <div class="left-product">
+                                <span class="price-product">
+                                  {{$product->giamoi}}
+                                </span>
+                                <div class="rate-star">
+                                    <div style="width:20%"></div>
                                 </div>
-                            @endforeach
-                        </div>
-                        <div class="clear"></div>
-						<div class="fb-comments" data-href="http://www.cagaileo.vn/" data-numposts="5" data-width="100%"></div>
-                    </div><!--//box-adv-center-->
-               
-                </div>
-                <div class="box-product">
-                    <div class="title">
-                        <h3 class="global-title"><a href="#">Tin liên quan</a></h3>
-                    </div>
-                    <div class="owl-carousel" id="slide-product">
-                        @foreach ($product->related_posts->chunk(2) as $rPost)
-                        <div class="item">
-                            @foreach ($rPost as $post)
-                            <div class="block">
-                                <a href="{{url($post->slug.'.html')}}" title="">
-                                    <img src="{{url('img/cache/218x128/'.$post->image)}}" width="218" height="128" alt=""/>
-                                </a>
-                                <h3>
-                                    <a href="{{url($post->slug.'.html')}}" title="">{{$post->title}}</a>
-                                </h3>
                             </div>
-                            @endforeach
+                            <div class="right-product">
+                                <span class="buy-product">
+                                  Mua ngay
+                                </span>
+                            </div>
                         </div>
-                        @endforeach
                     </div>
+                    @endforeach
                 </div>
+                <!-- /paging -->
+                <div class="boxPaging">
+                    @include('pagination.default', ['paginate' => $products])
+                </div><!--//news-list-->
+                <ul class="listAdv cf">
+                    <li>
+                        <a href="{{url('phan-phoi')}}">
+                            <img src="{{url('frontend/images/btn01.jpg')}}" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('lien-he')}}">
+                            <img src="{{url('frontend/images/btn02.jpg')}}" alt="">
+                        </a>
+                    </li>
+                </ul>
+                @foreach ($middleIndexBanner as $banner)
+                <div class="adv">
+                    <a href="{{$banner->url}}">
+                        <img src="{{$banner->image}}" alt="">
+                    </a>
+                </div>
+                @endforeach
             </div><!--//col-left-->
+
+
             @include('frontend.right')
             <div class="clear"></div>
         </div><!--//layout-home-->

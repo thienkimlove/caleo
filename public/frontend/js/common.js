@@ -88,6 +88,62 @@
         });
     };
 
+    var slideHots = function(){
+        $('#slide-hots').owlCarousel({
+            loop:true,
+            margin:20,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                640:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                1000:{
+                    items:4,
+                    nav:true,
+                    loop:true,
+                    dots: true
+                }
+            }
+        });
+    };
+
+    var slideDis = function(){
+        $('#slide-dis').owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                640:{
+                    items:1,
+                    nav:true,
+                    dots: false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                    loop:true,
+                    dots: true
+                }
+            }
+        });
+    };
+
     var slideCompany = function(){
         $('#slide-company').owlCarousel({
             loop:true,
@@ -217,7 +273,7 @@
     };
 
     /*equalHeight*/
-       equalHeight($('.col-left .box-news .item, .col-left .box-media .item'));
+       equalHeight($('.col-left .box-news .item, .col-left .box-media .item,.list-product .item-product '));
         function equalHeight(obj) {
           if($(window).width() > 960 && obj.length>0){
               obj.matchHeight();
@@ -253,6 +309,8 @@
         changeSearch();
         slideCompany();
         slideHomepage();
+        slideHots();
+        slideDis();
         slideProduct();
         slideProject();
         slideLink();

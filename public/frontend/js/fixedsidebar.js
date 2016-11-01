@@ -1,7 +1,6 @@
 $(document).ready(function() {
     // check where the shoppingcart-div is
     var offset = $('#sidebar').offset();
-    console.log(offset.top);
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
         console.log(scrollTop);

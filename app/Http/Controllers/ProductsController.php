@@ -49,6 +49,9 @@ class ProductsController extends AdminController
         $data = $request->all();
         $data['image'] =  ($request->file('image') && $request->file('image')->isValid()) ? $this->saveImage($request->file('image')) : '';
 
+        $data['hot_index'] = ($request->input('hot_index') == 'on') ? true : false;
+        $data['hot_below'] = ($request->input('status') == 'on') ? true : false;
+
         $product = Product::create($data);
         $this->syncTags($request, $product);        
         flash('Create product success!', 'success');
@@ -69,6 +72,9 @@ class ProductsController extends AdminController
         if ($request->file('image') && $request->file('image')->isValid()) {
             $data['image'] = $this->saveImage($request->file('image'), $product->image);
         }
+        $data['hot_index'] = ($request->input('hot_index') == 'on') ? true : false;
+        $data['hot_below'] = ($request->input('status') == 'on') ? true : false;
+
         $product->update($data);
         $this->syncTags($request, $product);
         flash('Update product success!', 'success');

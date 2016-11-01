@@ -50,6 +50,30 @@
 </head>
   <body class="home">
     <div class="wrapper" id="wrapper">
+      <div id="outer">
+        <div id="adv">
+          <div id="slideads">
+            <div class="slideads1" id="slideads1">
+              <ul>
+                <li>
+                  <a rel="nofollow" href="#" title="Banner chạy dọc bên trái" target="_blank">
+                    <img width="120" height="410" src="images/slide.jpg" alt="Banner">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="slideads2" id="slideads2">
+              <ul>
+                <li>
+                  <a rel="nofollow" href="#" title="Banner chạy dọc bên trái" target="_blank">
+                    <img width="120" height="410" src="images/slide.jpg" alt="Banner">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="header">
        <div class="header-mid">
         <div class="fix">
@@ -112,6 +136,53 @@
       <div class="layout-home">
         <div class="col-left">
           <!-- BoxContact -->
+          <div class="box-dis">
+            <h3 class="global-title">
+              <a href="#"><span>Xem san pham</span></a>
+            </h3>
+            <div class="area-contact cf">
+              <form action="" method="post">
+                <input type="text" name="name" class="txt txt-name" placeholder="Họ và tên"/>
+                <input type="email" name="email" class="txt txt-email" placeholder="Email"/>
+                <input type="number" name="phone" class="txt txt-phone" placeholder="Số điện thoại"/>
+                <input type="email" name="email" class="txt txt-add" placeholder="Địa chỉ"/>
+                <textarea name="content" class="txt txt-content" placeholder="Nội dung"></textarea>
+                <div class="btn-form">
+                  <input type="submit" value="Gửi" class="btn-submit"/>
+                  <input type="reset" value="Làm lại" class="btn-submit"/>
+                </div>
+              </form>
+            </div>
+            <div class="slide-dis">
+              <div class="owl-carousel" id="slide-dis">
+                <div class="item">
+                  <a class="thumb" href="" title="">
+                    <img src="images/sp03.png"/>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="thumb" href="" title="">
+                    <img src="images/sp03.png"/>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="thumb" href="" title="">
+                    <img src="images/sp03.png"/>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="thumb" href="" title="">
+                    <img src="images/sp03.png"/>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="thumb" href="" title="">
+                    <img src="images/sp03.png"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="box-member cf">
             <div class="title01">Miền bắc</div>
             <div class="data">
@@ -281,6 +352,62 @@
       <div class="clear"></div>
     </section><!--//section-->
     <footer class="footer">
+      <div class="infoFooter">
+          <div class="fix">
+
+            <div class="col-03">
+              <h3>Hỗ trợ khách hàng</h3>
+              <ul class="list-support">
+                <li><a href="#">Hệ thống cửa hàng</a></li>
+                <li><a href="#">Những câu hỏi thường gặp</a></li>
+                <li><a href="#">Phương thức thanh toán</a></li>
+                <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                <li><a href="#">Giao nhận hàng</a></li>
+                <li><a href="#">Hướng dẫn đổi trả hàng</a></li>
+              </ul>
+            </div>
+
+            <div class="col-03">
+              <h3>Liên hệ</h3>
+              <div class="list-contact">
+                <p>
+                  Địa chỉ liên hệ <br>
+                  <strong>Tại Hà Nội</strong> <br>
+                  Địa chỉ: Tầng 5 tòa nhà 29T1, <br>
+                  phố Hoàng Đạo Thúy, Trung Hòa, <br>
+                  Cầu Giấy, Hà Nội <br>
+                  ĐT: 04.62824344 <br>
+                  Fax: 04.62824263 <br>
+                </p>
+                <p>
+                  <strong>Chi nhánh TP. HCM</strong> <br>
+                  Địa chỉ:156/17 Tô Hiến Thành. P15 Q10. <br>
+                  TP.HCM <br>
+                  ĐT: 083.9797779 <br>
+                  Fax: 086.2646832 <br>
+                  Đường dây nóng: 0912571190. <br>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-03">
+              <div class="reg-sale">
+                <h3>
+                  Đăng ký nhận khuyến mại
+                  <p>Đăng ký khuyến mại từ Tue Linh</p>
+                </h3>
+                <form action="post" method="">
+                  <input type="text" placeholder="Nhập địa chỉ email">
+                  <button class="btn-send">Gửi</button>
+                </form>
+                <p>
+                  Chúng tôi cam kết Địa chỉ: Tầng 5 tòa nhà 29T1, phố Hoàng Đạo Thúy, Trung Hòa cầu giấy hà nội
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       <div class="container">
         <div class="boxFooter clearFix">
           <div class="areaSocial">
@@ -367,6 +494,7 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/slideAdvs.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

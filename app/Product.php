@@ -25,7 +25,16 @@ class Product extends Model implements SluggableInterface
         'content_tab2',
         'content_tab3',
         'seo_title',
-        'image'
+        'image',
+        'congdung',
+        'xuatxu',
+        'giayphep',
+        'quycach',
+        'tinhtrang',
+        'giacu',
+        'giamoi',
+        'hot_index',
+        'hot_below',
     ];
   
     /**

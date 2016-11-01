@@ -72,7 +72,58 @@
             </div>
 
 
+
+                <div class="form-group">
+                    {!! Form::label('congdung', 'Công dụng') !!}
+                    {!! Form::textarea('congdung', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('xuatxu', 'Xuất xứ') !!}
+                    {!! Form::text('xuatxu', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('giayphep', 'Giấy phép') !!}
+                    {!! Form::text('giayphep', null, ['class' => 'form-control']) !!}
+                </div>
+
+
+                <div class="form-group">
+                    {!! Form::label('quycach', 'Quy cách') !!}
+                    {!! Form::text('quycach', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('tinhtrang', 'Tình trạng') !!}
+                    {!! Form::text('tinhtrang', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('giacu', 'Giá cũ') !!}
+                    {!! Form::text('giacu', null, ['class' => 'form-control']) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('giamoi', 'Giá mới') !!}
+                    {!! Form::text('giamoi', null, ['class' => 'form-control']) !!}
+                </div>
+
+
+
+
             <div class="form-group">
+                {!! Form::label('hot_index', 'Hiển thị mục sản phẩm hot trang chủ') !!}
+                {!! Form::checkbox('hot_index', null, null) !!}
+            </div>
+
+
+            <div class="form-group">
+                {!! Form::label('hot_below', 'Hiển thị mục sản phẩm hot phía dưới') !!}
+                {!! Form::checkbox('hot_below', null, null) !!}
+            </div>
+
+           <div class="form-group">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
             </div>
 

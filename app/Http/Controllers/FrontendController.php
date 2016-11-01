@@ -82,13 +82,22 @@ class FrontendController extends Controller
                     'meta_image' => $defaultLogo
                 ];
                 break;
-            case 'product' :
+            case 'product_detail' :
                 return [
                     'meta_title' => $meta['title'],
                     'meta_desc' => $meta['desc'],
                     'meta_keywords' => $meta['keywords'],
                     'meta_url' => url('product/' . $mainContent),
                     'meta_image' => url('img/cache/120x120/'.$mainContent->image)
+                ];
+                break;
+            case 'product' :
+                return [
+                    'meta_title' => $meta['title'],
+                    'meta_desc' => $meta['desc'],
+                    'meta_keywords' => $meta['keywords'],
+                    'meta_url' => url('product'),
+                    'meta_image' => $defaultLogo
                 ];
                 break;
             case 'cau-hoi-thuong-gap' :
@@ -151,9 +160,29 @@ class FrontendController extends Controller
             $thirdIndexCategory = null;
         }
 
-        $middleIndexBanner = Banner::where('status', true)->where('position', 'middle_index')->get();
+        $hotProducts = Product::where('hot_index', true)
+            ->latest('updated_at')
+            ->limit(6)
+            ->get();
+
+        $moreProducts = Product::where('hot_index', false)
+            ->latest('updated_at')
+            ->limit(3)
+            ->get();
+
+        $middleIndexBanner = Banner::where('status', true)
+            ->where('position', 'middle_index')
+            ->get();
         
-        return view('frontend.index', compact('topIndexCategory', 'secondIndexCategory', 'thirdIndexCategory', 'middleIndexBanner', 'page'))->with($this->generateMeta());
+        return view('frontend.index', compact(
+            'topIndexCategory',
+            'secondIndexCategory',
+            'thirdIndexCategory',
+            'middleIndexBanner',
+            'page',
+            'hotProducts',
+            'moreProducts'
+        ))->with($this->generateMeta());
     }
 
     public function contact()
@@ -283,23 +312,45 @@ class FrontendController extends Controller
         }
     }
 
-    public function product()
+    public function product($value = null)
     {
         $page = 'product';
 
         $middleIndexBanner = Banner::where('status', true)->where('position', 'middle_index')->get();
+        $meta_title = $meta_desc = $meta_keywords = null;
+        if ($value) {
+            $product = Product::where('slug', $value)->first();
+            $advProduct = Banner::where('status', true)->where('position', 'top_product_detail')->get();
+            $meta_title = ($product->seo_title) ? $product->seo_title : $product->title;
+            $meta_desc = $product->desc;
+            $meta_keywords = $product->keywords;
+            $hotProducts = Product::where('hot_below', true)
+                ->where('id', '<>', $product->id)
+                ->latest('updated_at')
+                ->limit(5)
+                ->get();
+            return view('frontend.product_detail', compact(
+                'product',
+                'middleIndexBanner',
+                'page',
+                'advProduct',
+                'hotProducts'
+            ))->with($this->generateMeta('product_detail', [
+                'title' => $meta_title,
+                'desc' => $meta_desc,
+                'keywords' => $meta_keywords,
+            ], $product));
+        } else {
 
-        $product = Product::latest('updated_at')->first();
+          $products = Product::paginate(9);
 
-        $meta_title = ($product->seo_title) ? $product->seo_title : $product->title;
-        $meta_desc = $product->desc;
-        $meta_keywords = $product->keywords;
+            return view('frontend.product', compact('products', 'middleIndexBanner', 'page'))->with($this->generateMeta('product', [
+                'title' => $meta_title,
+                'desc' => $meta_desc,
+                'keywords' => $meta_keywords,
+            ]));
+        }
 
-        return view('frontend.product', compact('product', 'middleIndexBanner', 'page'))->with($this->generateMeta('product', [
-            'title' => $meta_title,
-            'desc' => $meta_desc,
-            'keywords' => $meta_keywords,
-        ], $product));
     }
 
     public function question($value = null)
