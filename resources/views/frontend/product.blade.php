@@ -57,7 +57,7 @@
                 @foreach ($middleIndexBanner as $banner)
                 <div class="adv">
                     <a href="{{$banner->url}}">
-                        <img src="{{$banner->image}}" alt="">
+                        <img src="{{url('files', $banner->image)}}" alt="">
                     </a>
                 </div>
                 @endforeach

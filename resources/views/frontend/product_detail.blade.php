@@ -19,7 +19,7 @@
                         </div>
                         @foreach ($advProduct as $adv)
                         <div class="adv-product">
-                            <img src="{{$adv->image}}" alt="">
+                            <img src="{{url('files', $adv->image)}}" alt="">
                         </div>
                         @endforeach
                     </div>
