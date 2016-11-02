@@ -52,7 +52,7 @@
 
                 @foreach ($topIndexCategory->subCategories as $k=>$sub)
 
-                    <div class="news-home" id="tab-{{$k}}" style="display: block">
+                    <div class="news-home" id="tab-{{$k}}" style="display: none">
                         @foreach ($sub->list_posts->splice(0, 3) as $post)
                             <article class="item-products">
                                 <a href="{{url($post->slug.'.html')}}" title="" class="thumbs">
