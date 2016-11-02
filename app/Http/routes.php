@@ -61,7 +61,7 @@ Route::get('tag/{value}', 'FrontendController@tag');
 
 Route::get('search', 'FrontendController@search');
 
-Route::get('product/{value}', 'FrontendController@product');
+Route::get('product/{value?}', 'FrontendController@product');
 
 Route::get('cau-hoi-thuong-gap/{value?}', 'FrontendController@question');
 
