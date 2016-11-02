@@ -241,7 +241,11 @@ class FrontendController extends Controller
             foreach (config('delivery')['area'] as $key => $area) {
                 $totalDeliveries[$area] = Delivery::where('area', $key)->get();
             }
-            return view('frontend.delivery', compact('totalDeliveries', 'page'))->with($this->generateMeta('phan-phoi', [
+            $deliveryProducts = Product::where('hot_below', true)
+                ->latest('updated_at')
+                ->limit(5)
+                ->get();
+            return view('frontend.new_phanphoi', compact('totalDeliveries', 'page', 'deliveryProducts'))->with($this->generateMeta('phan-phoi', [
                 'title' => $meta_title,
                 'desc' => $meta_desc,
                 'keywords' => $meta_keywords,

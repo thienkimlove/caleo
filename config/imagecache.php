@@ -117,6 +117,9 @@ return array(
         '200x200' => function($image) {
             return $image->fit(200, 200);
         },
+        '93x93' => function($image) {
+            return $image->fit(93, 93);
+        },
     ),
 
     /*
