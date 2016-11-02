@@ -73,7 +73,7 @@ class ProductsController extends AdminController
             $data['image'] = $this->saveImage($request->file('image'), $product->image);
         }
         $data['hot_index'] = ($request->input('hot_index') == 'on') ? true : false;
-        $data['hot_below'] = ($request->input('status') == 'on') ? true : false;
+        $data['hot_below'] = ($request->input('hot_below') == 'on') ? true : false;
 
         $product->update($data);
         $this->syncTags($request, $product);
