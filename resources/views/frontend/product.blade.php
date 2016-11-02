@@ -14,7 +14,7 @@
                     @foreach ($products as $product)
                        <div class="item-product">
                         <a href="{{url('product', $product->slug)}}" class="thumb-product">
-                            <img src="{{url('img/cache/188x188', $product->image)}}g" alt="">
+                            <img src="{{url('img/cache/188x188', $product->image)}}" alt="">
                         </a>
                         <h3><a href="{{url('product', $product->slug)}}">{{$product->title}}</a></h3>
                         <p>
