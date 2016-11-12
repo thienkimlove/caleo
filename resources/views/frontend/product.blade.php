@@ -1,4 +1,4 @@
-﻿@extends('frontend')
+@extends('frontend')
 
 @section('content')
 
@@ -18,23 +18,28 @@
                         </a>
                         <h3><a href="{{url('product', $product->slug)}}">{{$product->title}}</a></h3>
                         <p>
-                            {{$product->desc}}
+                            {{str_limit($product->desc, 108)}}
                         </p>
-                        <div class="panel-product cf">
-                            <div class="left-product">
-                                <span class="price-product">
-                                  {{$product->giamoi}}
-                                </span>
-                                <div class="rate-star">
-                                    <div style="width:20%"></div>
-                                </div>
-                            </div>
-                            <div class="right-product">
+                           <div class="panel-product cf">
+                               <div class="left-product">
+                                   <div class="area-price">
+                                      <span class="old-product">
+                                       {{$product->giacu}}
+                                      </span>
+                                           <span class="price-product">
+                                        {{$product->giamoi}}
+                                      </span>
+                                   </div>
+                                   <div class="rate-star">
+                                       <div style="width:20%"></div>
+                                   </div>
+                               </div>
+                               <div class="right-product">
                                 <span class="buy-product">
-                                  Mua ngay
+                                   <a href="{{url('product', $product->slug)}}" title="" style="color:#FFFFFF">Mua ngay</a>
                                 </span>
-                            </div>
-                        </div>
+                               </div>
+                           </div>
                     </div>
                     @endforeach
                 </div>

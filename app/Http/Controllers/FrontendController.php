@@ -93,9 +93,9 @@ class FrontendController extends Controller
                 break;
             case 'product' :
                 return [
-                    'meta_title' => $meta['title'],
-                    'meta_desc' => $meta['desc'],
-                    'meta_keywords' => $meta['keywords'],
+                    'meta_title' => 'Sản phẩm | '.$settings['META_INDEX_TITLE'],
+                    'meta_desc' => $settings['META_INDEX_DESC'],
+                    'meta_keywords' => $settings['META_INDEX_KEYWORDS'],
                     'meta_url' => url('product'),
                     'meta_image' => $defaultLogo
                 ];
@@ -165,9 +165,8 @@ class FrontendController extends Controller
             ->limit(6)
             ->get();
 
-        $moreProducts = Product::where('hot_index', false)
-            ->latest('updated_at')
-            ->limit(3)
+        $belowProductBanner = Banner::where('status', true)
+            ->where('position', 'below_product_index')
             ->get();
 
         $middleIndexBanner = Banner::where('status', true)
@@ -181,7 +180,7 @@ class FrontendController extends Controller
             'middleIndexBanner',
             'page',
             'hotProducts',
-            'moreProducts'
+            'belowProductBanner'
         ))->with($this->generateMeta());
     }
 

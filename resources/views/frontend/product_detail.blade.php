@@ -1,4 +1,4 @@
-@extends('frontend')
+﻿@extends('frontend')
 @section('content')
     <section class="section fix">
         <div class="layout-home">
@@ -11,7 +11,7 @@
                     <div class="img-intro">
                         <div class="img-product">
                             <div class="img-thumb">
-                                <a href="#">Xem ảnh lớn</a>
+                                <a href="{{url('files', $product->image)}}" target="_blank">Xem ảnh lớn</a>
                                 <a href="">
                                     <img src="{{url('img/cache/200x200', $product->image)}}" alt="">
                                 </a>
@@ -51,11 +51,10 @@
                             </select>
                         </p>
                         <p class="buy-product">
-                            <a href="#" class="btn-buy">Mua ngay</a>
-                            <a class="guide">Hướng dẫn mua hàng</a>
-                        </p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchHSToVoSGwbqz9SM1rZHhh_8m17edRTIkEdu_U8ahIBKW-g/viewform" target="_blank" class="btn-buy">Mua ngay</a>
+                            <a class="guide">Hướng dẫn mua hàng</a>                        </p>
                         <div class="consult">
-                            <p>Duoc sy tu van: <span class="phone">1900 1484</span></p>
+                            <p>Dược sỹ tư vấn: <span class="phone">0912571190</span></p>
                             <p class="enter-number">Ngại gọi điện? Vui lòng nhập số điện thoại.</p>
                             <p>
                                 <input type="text" placeholder="Nhập điện thoại"><button class="btn-send">Gửi</button>
@@ -111,11 +110,15 @@
                             @foreach ($hotProducts as $hotPro)
                             <div class="item">
                                 <a class="thumb" href="{{url('product', $hotPro->slug)}}" title="">
-                                    <img src="{{url('img/cache/130x130', $hotPro->image)}}"/>
+                                    <img src="{{url('img/cache/188x188', $hotPro->image)}}"/>
                                 </a>
                                 <h3><a href="{{url('product', $hotPro->slug)}}">{{$product->title}}</a></h3>
+                                <!-- <div class="info-price">
+                                    
+                                </div> -->
                                 <div class="info-price">
-                                    <p class="price">{{$product->giamoi}}</p>
+                                    <p class="price discount">{{$hotPro->giacu}}</p>
+                                    <p class="price">{{$hotPro->giamoi}}</p>
                                 </div>
                                 <p class="buy"><a href="{{url('product', $hotPro->slug)}}" class="buy-now">Mua ngay</a></p>
                                 <div class="rate-star">

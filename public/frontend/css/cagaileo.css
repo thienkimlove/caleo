@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @font-face {
   font-family: 'Open Sans';
   src: url("../font/open-sans.eot"), url("../font/open-sans.ttf") format("truetype"), url("../font/open-sans.woff") format("woff");
@@ -686,13 +686,13 @@ img {
 }
 .box-member .data .item {
   float: left;
-  width: 18.75%;
+  width: 23%;
   margin-left: 10px;
 }
 .box-member .data .item a {
   display: block;
   background: url('../images/ilocation.png') no-repeat;
-  padding: 0 0 0 15px;
+  padding: 0 0 5px 15px;
 }
 
 .box-category {
@@ -2071,6 +2071,7 @@ img {
 }
 .box-hots .item img {
   border: 1px solid #e8e8e8;
+  width: inherit;
 }
 .box-hots .item img:hover {
   border-color: #cbcbcb;
@@ -2078,6 +2079,7 @@ img {
 .box-hots .item h3 {
   margin-top: 10px;
   margin-bottom: 5px;
+  min-height: 50px;
 }
 .box-hots .item h3 a {
   color: #3ab54a;
@@ -2219,6 +2221,14 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
+}
+.box-dis .area-contact span {
+  width: 15%;
+  display: inline-block;
+}
+.box-dis .area-contact .txt {
+  width: 85%;
+  background: #eee;
 }
 .box-dis .area-contact .btn-form {
   text-align: right;
@@ -2484,7 +2494,7 @@ img {
   margin-bottom: 20px;
 }
 .list-product .item-product {
-  width: 33%;
+  width: 33.3333333%;
   padding: 10px;
   float: left;
   vertical-align: top;
@@ -2497,31 +2507,46 @@ img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.list-product .item-product h3 {
+  min-height: 50px;
+}
+.list-product .item-product p {
+  min-height: 80px;
+}
 .list-product .panel-product {
   margin-top: 10px;
 }
 .list-product .left-product {
-  float: left;
+  /* float: left; */
+  text-align: center;
 }
-
+.list-product .old-product {
+  display: inline-block;
+  text-decoration: line-through;
+  margin-right: 10px;
+  font-size: 13px;
+}
 .list-product .panel-product .rate-star {
   margin-top: 0;
+  display: inline-block;
 }
 .list-product .right-product {
-  float: right;
+  /* float: right; */
+  text-align: center;
+  margin: 10px 0;
 }
 
 .list-product .price-product {
   display: inline-block;
   color: #cc0000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 .list-product .rate-star {
   display: block;
 }
 .list-product .buy-product {
-  float: right;
+  display: inline-block;
   background: #ff6600;
   color: #fff;
   border-radius: 5px;
@@ -4220,7 +4245,7 @@ img {
     width: 100%;
     margin: 0;
   }
-
+  
   .box-slider {
     display: none;
   }
@@ -4229,6 +4254,15 @@ img {
     width: 100%;
   }
 
+  .list-product .item-product {
+    width: 100%;
+    float: none;
+  }
+  .product-detail .img-intro, .product-detail .product-desc{
+    float: none;
+    width: 100%;
+    margin-right: 0%
+  }
   .layout-home .news-home .item h3 {
     margin-top: 0;
   }

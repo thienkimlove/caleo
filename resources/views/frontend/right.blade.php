@@ -1,4 +1,12 @@
 ﻿<div class="col-right">
+    @foreach ($rightBanners as $banner)
+        <div class="box-adv">
+            <a href="{{$banner->url}}">
+                <img src="{{url('files/'.$banner->image)}}" alt="Tue linh">
+            </a>
+        </div>
+    @endforeach
+
     @if ($featureVideos->count() > 0)
         <div class="box-video">
             <h3 class="global-title"><a href="{{url('video')}}">Góc videos</a></h3>
@@ -15,21 +23,11 @@
                 </ul>
             @endif
         </div>
-    @endif
-    @foreach ($rightBanners as $banner)
-        <div class="box-adv">
-            <a href="{{$banner->url}}">
-                <img src="{{url('files/'.$banner->image)}}" alt="Tue linh">
-            </a>
-        </div>
-    @endforeach
-    
+    @endif 
     
     <!-- /endHot -->
     <div class="Social">
-        <div class="fb-page" data-href="https://www.facebook.com/viemgan.com.vn/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/viemgan.com.vn/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/viemgan.com.vn/">PHÒNG BỆNH GAN</a></blockquote>
-        </div>
-      </div>
+        <div class="fb-page" data-href="https://www.facebook.com/cagaileotuelinh" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/cagaileotuelinh" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cagaileotuelinh">Cà Gai Leo Tuệ Linh</a></blockquote></div>    </div>
 
 
     @if (!in_array($page, ['video', 'lien-he', 'phan-phoi']))

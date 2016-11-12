@@ -1,14 +1,10 @@
-@extends('frontend')
+﻿@extends('frontend')
 
 @section('content')
 
     <section class="section fix">
         <div class="layout-home">
-            <ul class="breadcrumbs cf">
-                <li><a href="{{url('/')}}">Trang chủ</a></li>
-                <li>Thông tin cà gai leo</li>
-            </ul>
-
+          
             <div class="box-news cf">
                 <div class="title-panel cf">
                     <div class="title">
@@ -58,9 +54,9 @@
                                 <a href="{{url($post->slug.'.html')}}" title="" class="thumbs">
                                     <img src="{{url('img/cache/310x230/'.$post->image)}}" width="310" height="230" alt=""/>
                                 </a>
-                                <h3>
+                                <h4>
                                     <a href="{{url($post->slug.'.html')}}" title="">{{$post->title}}</a>
-                                </h3>
+                                </h4>
                                 <p>
                                     {{str_limit($post->desc, 140)}}
                                 </p>
@@ -83,7 +79,7 @@
                             @foreach ($hotProducts as $product)
                                 <div class="item">
                                     <a class="thumb" href="{{url('product', $product->slug)}}" title="">
-                                        <img src="{{url('img/cache/212x126', $product->image)}}"/>
+                                        <img src="{{url('img/cache/188x188', $product->image)}}"/>
                                     </a>
                                     <h3><a href="{{url('product', $product->slug)}}">{{$product->title}}</a></h3>
                                     <div class="info-price">
@@ -101,11 +97,10 @@
             @endif
 
             <div class="more-product cf">
-                @foreach ($moreProducts as $product)
+                @foreach ($belowProductBanner as $banner)
                 <div class="col-03">
-                    <a href="{{url('product', $product->slug)}}">
-                        <img src="{{url('img/cache/287x143', $product->image)}}" alt="">
-                        <span class="des">{{$product->title}}</span>
+                    <a href="{{$banner->url}}">
+                        <img src="{{url('files', $banner->image)}}" alt="">
                     </a>
                 </div>
                 @endforeach

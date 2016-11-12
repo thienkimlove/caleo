@@ -11,11 +11,11 @@
                     </h3>
                     <div class="area-contact cf">
                         {!! Form::open(array('url' => 'save_question')) !!}
-                            <input type="text" name="ask_person" class="txt txt-name" placeholder="Họ và tên"/>
-                            <input type="email" name="ask_email" class="txt txt-email" placeholder="Email"/>
-                            <input type="number" name="ask_phone" class="txt txt-phone" placeholder="Số điện thoại"/>
-                            <input type="email" name="ask_address" class="txt txt-add" placeholder="Địa chỉ"/>
-                            <textarea name="question" class="txt txt-content" placeholder="Nội dung"></textarea>
+                            <span>Họ và tên:</span><input type="text" name="ask_person" class="txt txt-name" placeholder="Họ và tên"/>
+                            <span>Email:</span><input type="email" name="ask_email" class="txt txt-email" placeholder="Email"/>
+                            <span>Số điện thoại:</span><input type="text" name="ask_phone" class="txt txt-phone" placeholder="Số điện thoại"/>
+                            <span>Địa chỉ:</span><input type="text" name="ask_address" class="txt txt-add" placeholder="Địa chỉ"/>
+                            <span>Nội dung:</span><textarea name="question" class="txt txt-content" placeholder="Nội dung"></textarea>
                             <div class="btn-form">
                                 <input type="submit" value="Gửi" class="btn-submit"/>
                                 <input type="reset" value="Làm lại" class="btn-submit"/>

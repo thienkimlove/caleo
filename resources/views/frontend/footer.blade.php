@@ -1,16 +1,16 @@
-﻿<footer class="footer" id="footer">
+<footer class="footer" id="footer">
     <div class="infoFooter">
         <div class="fix">
 
             <div class="col-03">
                 <h3>Hỗ trợ khách hàng</h3>
                 <ul class="list-support">
-                    <li><a href="#">Hệ thống cửa hàng</a></li>
-                    <li><a href="#">Những câu hỏi thường gặp</a></li>
-                    <li><a href="#">Phương thức thanh toán</a></li>
-                    <li><a href="#">Hướng dẫn đặt hàng</a></li>
-                    <li><a href="#">Giao nhận hàng</a></li>
-                    <li><a href="#">Hướng dẫn đổi trả hàng</a></li>
+                    <li><a href="http://www.cagaileo.vn/phan-phoi" target="_blank">Hệ thống cửa hàng</a></li>
+                    <li><a href="http://www.cagaileo.vn/cau-hoi-thuong-gap" target="_blank">Những câu hỏi thường gặp</a></li>
+                    <li><a href="http://www.cagaileo.vn/phuong-thuc-thanh-toan.html" target="_blank">Phương thức thanh toán</a></li>
+                    <li><a href="http://www.cagaileo.vn/cach-dat-hang-truc-tuyen.html" target="_blank">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="http://www.cagaileo.vn/giao-nhan-hang.html" target="_blank">Giao nhận hàng</a></li>
+                    <li><a href="http://www.cagaileo.vn/huong-dan-doi-tra.html" target="_blank">Hướng dẫn đổi trả hàng</a></li>
                 </ul>
             </div>
 
@@ -18,18 +18,14 @@
                 <h3>Liên hệ</h3>
                 <div class="list-contact">
                     <p>
-                        Địa chỉ liên hệ <br>
                         <strong>Tại Hà Nội</strong> <br>
-                        Địa chỉ: Tầng 5 tòa nhà 29T1, <br>
-                        phố Hoàng Đạo Thúy, Trung Hòa, <br>
-                        Cầu Giấy, Hà Nội <br>
                         ĐT: 04.62824344 <br>
                         Fax: 04.62824263 <br>
+                        Đường dây nóng: 0912571190. <br>
                     </p>
                     <p>
+                    <br>
                         <strong>Chi nhánh TP. HCM</strong> <br>
-                        Địa chỉ:156/17 Tô Hiến Thành. P15 Q10. <br>
-                        TP.HCM <br>
                         ĐT: 083.9797779 <br>
                         Fax: 086.2646832 <br>
                         Đường dây nóng: 0912571190. <br>
@@ -40,15 +36,16 @@
             <div class="col-03">
                 <div class="reg-sale">
                     <h3>
-                        Đăng ký nhận khuyến mại
-                        <p>Đăng ký khuyến mại từ Tue Linh</p>
+                        Đăng ký nhận khuyến mại:
+                        <p>Điền ngay email của bạn để nhận những thông tin khuyến mại của chúng tôi</p>
                     </h3>
-                    <form action="post" method="">
-                        <input type="text" placeholder="Nhập địa chỉ email">
+                    {!! Form::open(array('url' => 'save_question')) !!}
+                        <input type="text" name="ask_email" placeholder="Nhập địa chỉ email">
+                        <input type="hidden" name="question" value="Email đăng ký nhận khuyến mại" />
                         <button class="btn-send">Gửi</button>
-                    </form>
+                    {!! Form::close() !!}
                     <p>
-                        Chúng tôi cam kết Địa chỉ: Tầng 5 tòa nhà 29T1, phố Hoàng Đạo Thúy, Trung Hòa cầu giấy hà nội
+                        
                     </p>
                 </div>
             </div>
