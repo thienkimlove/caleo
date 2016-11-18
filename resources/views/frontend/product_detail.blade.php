@@ -18,9 +18,9 @@
                             </div>
                         </div>
                         @foreach ($advProduct as $adv)
-                        <div class="adv-product">
-                            <img src="{{url('files', $adv->image)}}" alt="">
-                        </div>
+                            <div class="adv-product">
+                                <img src="{{url('files', $adv->image)}}" alt="">
+                            </div>
                         @endforeach
                     </div>
                     <div class="product-desc">
@@ -57,7 +57,11 @@
                             <p>Dược sỹ tư vấn: <span class="phone">0912571190</span></p>
                             <p class="enter-number">Ngại gọi điện? Vui lòng nhập số điện thoại.</p>
                             <p>
-                                <input type="text" placeholder="Nhập điện thoại"><button class="btn-send">Gửi</button>
+                                {!! Form::open(array('url' => 'save_question')) !!}
+                                <input type="text" name="ask_phone" placeholder="Nhập điện thoại">
+                                <input type="hidden" name="question" value="Ngại gọi điện? Vui lòng nhập số điện thoại." />
+                                <button type="submit" class="btn-send">Gửi</button>
+                                {!! Form::close() !!}
                             </p>
                         </div>
                     </div>
@@ -80,9 +84,9 @@
                     </ul><!--//news-type-->
                     <div class="news-home" id="tab-infoproduct" style="display: block">
                         <article class="detail">
-                            {!! $product->content_tab1 !!}
-                            <!-- //listButton -->
-                             @include('frontend.social')
+                        {!! $product->content_tab1 !!}
+                        <!-- //listButton -->
+                            @include('frontend.social')
                         </article>
                     </div><!--//news-list-->
                     <div class="news-home" id="tab-research01">
@@ -108,23 +112,23 @@
                     <div class="slide-hots">
                         <div class="owl-carousel" id="slide-hots">
                             @foreach ($hotProducts as $hotPro)
-                            <div class="item">
-                                <a class="thumb" href="{{url('product', $hotPro->slug)}}" title="">
-                                    <img src="{{url('img/cache/188x188', $hotPro->image)}}"/>
-                                </a>
-                                <h3><a href="{{url('product', $hotPro->slug)}}">{{$product->title}}</a></h3>
-                                <!-- <div class="info-price">
-                                    
-                                </div> -->
-                                <div class="info-price">
-                                    <p class="price discount">{{$hotPro->giacu}}</p>
-                                    <p class="price">{{$hotPro->giamoi}}</p>
+                                <div class="item">
+                                    <a class="thumb" href="{{url('product', $hotPro->slug)}}" title="">
+                                        <img src="{{url('img/cache/188x188', $hotPro->image)}}"/>
+                                    </a>
+                                    <h3><a href="{{url('product', $hotPro->slug)}}">{{$product->title}}</a></h3>
+                                    <!-- <div class="info-price">
+
+                                    </div> -->
+                                    <div class="info-price">
+                                        <p class="price discount">{{$hotPro->giacu}}</p>
+                                        <p class="price">{{$hotPro->giamoi}}</p>
+                                    </div>
+                                    <p class="buy"><a href="{{url('product', $hotPro->slug)}}" class="buy-now">Mua ngay</a></p>
+                                    <div class="rate-star">
+                                        <div style="width: 100%;"></div>
+                                    </div>
                                 </div>
-                                <p class="buy"><a href="{{url('product', $hotPro->slug)}}" class="buy-now">Mua ngay</a></p>
-                                <div class="rate-star">
-                                    <div style="width: 100%;"></div>
-                                </div>
-                            </div>
                             @endforeach
                         </div>
                     </div>
